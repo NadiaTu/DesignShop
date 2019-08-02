@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> ND Design Shop-Necklace</title> 
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Style.css" media="screen" type="text/css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>                 
+    </head>
+    <body>
+        <div id="site">
+            <header>
+                <div id="logoLeft"> 
+                    <a href="index.html" id="logo"></a>
+                </div>
+                <div id="navRigth">
+                <div id="signRegDiv">
+                    <a onclick="signFunc()" id="signReg">
+                        <span class="tooltiptextSign">Sign In <hr> Register</span>
+                    </a>
+                    <a id="cartA" href="cart.html">
+                        <span class="tooltiptextCart">Cart</span>
+                    </a>
+                </div>
+                <div>
+                    <nav id="main-nav">
+                        <ul id="my-list" class= "menu1"></ul>
+                    </nav>
+                </div>
+                <div class="menu__toggler"><span></span></div>
+                </div>
+            </header>
+        
+            <h1>
+                <img src="images/BraceletIcon.png" alt="Bracelet" class="catTitle ProdCatImgBracelet">
+            </h1>  
+            <div id="content">
+                <div id="products">                                   
+                    <div class="product-description" data-name="Fluorite bracelet" data-price="45">
+                        <img id="301" alt="Fluorite-bracelet" src="images/b2s.jpg">
+                        <h3 class="product-name">Fluorite bracelet</h3>
+                        <h4>Colorful crystal bracelet with quartz and fluorite stones.</h4>                     
+                        <p class="itemSize"><b>More details:</b> lenght:17cm </p>
+                        <p class="product-price">&dollar; 45</p>
+                        <form class="add-to-cart" action="cart.html" method="post">
+                            <div class="qtydiv">
+                                <label for="qty-7">Quantity</label>
+                                <input type="text" name="qty-7" id="qty-7" class="qty" value="1" />
+                            </div>
+                            <p><input type="submit" value="Add to cart" class="btn" /></p>
+                        </form>
+                    </div>
+                    <div class="product-description" data-name="Silver shine bracelet" data-price="45">
+                        <img id="302" alt="Silver shine" src="images/b1s.jpg">
+                        <h3 class="product-name">Silver shine bracelet</h3>
+                        <h4>Silver plated beads and Swarovski crystals, with sterling silver clasp.</h4>                     
+                        <p class="itemSize"><b>More details:</b> lenght:16cm </p>
+                        <p class="product-price">&dollar; 45</p>
+                        <form class="add-to-cart" action="cart.html" method="post">
+                            <div class="qtydiv">
+                                <label for="qty-8">Quantity</label>
+                                <input type="text" name="qty-8" id="qty-8" class="qty" value="1" />
+                            </div>
+                            <p><input type="submit" value="Add to cart" class="btn" /></p>
+                        </form>
+                    </div>                                  
+                </div>        
+            </div>
+        </div>
+        <footer>
+            <div> 
+                <div >
+                    <p id="shipInfo">We ship worldwide! <br> Free international shipping </p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Sign in or register</a>
+                    </li> 
+                    <li>
+                        <a href="Credits.html">Credits</a>
+                    </li>
+                </ul>
+                <ul>                  
+                    <li id="rights">&copy; All rights reserved to ND Design &amp; Nadia Tuchman</li>
+                </ul>
+            </div>
+        </footer>   
+        <script src="scripts/master.js"></script>
+        <script defer src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </body>
+</html>

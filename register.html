@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ <title>Sign In/Register-ND Design Shop</title> 
+ <link href="style.css" type="text/css" rel= "stylesheet"/>
+    </head>
+    <body>
+        <script src="scripts/FormsValidationScript.js"></script>
+        <script src="scripts/script.js"></script>
+        <header>
+            <div id="logoLeft"> 
+                <a href="index.html" id="logo"></a>
+            </div>
+            <div id="navRigth">
+                <div id="signRegDiv">
+                    <a onclick="signFunc()" id="signReg">
+                        <span class="tooltiptextSign">Sign In <hr> Register</span>
+                    </a>
+                    <a id="cartA" href="cart.html">
+                        <span class="tooltiptextCart">Cart</span>
+                    </a>
+                </div>
+                <div>
+                    <nav id="main-nav">
+                        <ul id="my-list" class= "menu1"></ul>
+                    </nav>
+                </div>
+                <div class="menu__toggler"><span></span></div>
+            </div>
+        </header>
+        
+        <div class="signin" align="center" >
+            <form name="signF" class="signForm" action="index.html" onsubmit="return validateEmptySign()" method="POST"> 
+                <h2 class="allTitles">
+                    <img src="images/signinIcon.png" alt="Sign In" class="catTitle signInpage">
+                </h2>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="s_email" maxleght="25" autocomplete="on" text="Email address" required/><br>
+                <label for="password1">Password:</label>
+                <input type="password" name="password1" id="s_password" maxleght="18" text="Password" required/><br>
+                <button class="button buttonSubmit" value="submit">Sign In</button>
+            </form>
+        </div>
+        <h1 id="regOr" align="center">
+            <img src="images/OrIcon.png" alt="OR"  class="catTitle OrIcon">
+        </h1>
+
+        <div class="register" align="center">
+            <form   name="RegisterF" class="regForm"  action="index.html" onsubmit="return validateEmptyReg()" method="POST"> 
+                <h2 class="allTitles">
+                    <img src="images/register.png" alt="Sign up" width="30%" height="2%" class="catTitle signInpage">
+                </h2>
+                <h3 >Please fill in your details:</h3><br>
+                <label for="first_name">First name:</label>
+                <input type="text" name="first_name" id="first_name" maxleght="15" pattern="[a-zA-Z]*" required/>
+                <label for="last_name" id="lnameLabel">Last name:</label>
+                <input type="text" name="last_name" id="last_name" maxleght="25" required/>
+                <label for="email" id="emailLabel">Email:</label>
+                <input type="email" name="emailreg" id="email" maxleght="25" autocomplete="on" required/><br>
+                <label for="password1">Password:</label>
+                <input type="password" name="password1" id="password1" maxleght="18" text="enter a new password" required/><br>
+                <label for="password2">Repeat password:</label>
+                <input type="password" name="password2" id="password2" maxleght="18" text="repeat the password" required/><br>
+                <label for="address1">Shipping address:</label>
+                <input type="text" name="address1" id="address1" maxleght="30" text="shipping address" required/><br>
+                <label for="address2">Address line 2:</label>
+                <input type="text" name="address2" id="address2" maxleght="30" text="shipping address"/><br>
+                <label for="country">Country name:</label>
+                <input type="text" name="country" id="country" maxleght="25" pattern="[a-zA-Z]*" required/><br><br>
+                <label for="zip">Zip code:</label>
+                <input type="text" name="zip" id="zip" maxleght="12" pattern="[0-9]*" required/><br>
+                <label for="tel">Phone number:</label>
+                <input type="text" name="tel" id="tel" maxleght="20" required/><br>                
+                <button class="button buttonSubmit" value="submit">Submit</button> 
+            </form>            
+        </div>
+       <footer>
+            <div> 
+                <div >
+                    <p id="shipInfo">We ship worldwide! <br> International shipping flat rate: 5$ </p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Sign in or register</a>
+                    </li> 
+                    <li>
+                        <a href="Credits.html">Credits</a>
+                    </li>
+                </ul>
+                <ul>                  
+                    <li id="rights">&copy; All rights reserved to ND Design &amp; Nadia Tuchman</li>
+                </ul>
+            </div>
+        </footer>        
+        <script src="scripts/master.js"></script>
+        <script defer src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </body>
+</html>

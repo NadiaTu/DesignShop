@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact ND Design Shop</title> 
+        <link href="style.css" type="text/css" rel= "stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div id="logoLeft"> 
+                <a href="index.html" id="logo"></a>
+            </div>
+            <div id="navRigth">
+                <div id="signRegDiv">
+                    <a onclick="signFunc()" id="signReg">
+                        <span class="tooltiptextSign">Sign In <hr> Register</span>
+                    </a>
+                    <a id="cartA" href="cart.html">
+                        <span class="tooltiptextCart">Cart</span>
+                    </a>
+                </div>
+                <div>
+                    <nav id="main-nav">
+                        <ul id="my-list" class= "menu1"></ul>
+                    </nav>
+                </div>
+                <div class="menu__toggler"><span></span></div>
+            </div>
+        </header>
+        <h1>
+            <img src="images/ContactIcon.png" alt="Contact" class="catTitle ContactPage">
+        </h1>     
+        <br>
+        <form  name="contactF" class="contactForm" action="index.html" onsubmit="validateEmpty()"> 
+            <label for="first_name">First name:</label>
+            <input type="text" name="first_name" id="first_name" maxleght="15" pattern="[a-zA-Z]*" required/><br>
+            <label for="last_name">Last name:</label>
+            <input type="text" name="last_name" id="last_name" maxleght="20" required/><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" maxleght="25" autocomplete="on" required/><br>
+            <label for="tel">Phone number:</label>
+            <input type="text" name="tel" id="tel" maxleght="20" required/><br>
+            
+            <fieldset id="contact_reason">
+                <legend> <label for="last_name">How can we help?</label> </legend>            
+                <input class= "radBtn" type="radio" name="reason" value="preorder" notchecked> Help in ordering process<br><br>
+                <input class= "radBtn" type="radio" name="reason" value="postorder" notchecked> Help after order completion<br><br>
+                <input class= "radBtn" type="radio" name="reason" value="bussiness" notchecked>Bussiness offer<br><br>
+                <input class= "radBtn" type="radio" name="reason" value="other" notchecked>other (please provide more info)<br>
+                <label for="details">Details:</label><br>
+                <textarea name="details" id="details" rows="5" cols="50" maxleght="300" required></textarea>
+            </fieldset>
+            <button align="center"  class="button button_contactForm" type="submit" value="submit">Submit</button>
+        </form>
+        
+        <footer>
+            <div> 
+                <div >
+                    <p id="shipInfo">We ship worldwide! <br> Free international shipping </p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Sign in or register</a>
+                    </li> 
+                    <li>
+                        <a href="Credits.html">Credits</a>
+                    </li>
+                </ul>
+                <ul>                  
+                    <li id="rights">&copy; All rights reserved to ND Design &amp; Nadia Tuchman</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="scripts/master.js"></script>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/FormsValidationScript.js"></script>
+        <script defer src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </body>
+    </html>

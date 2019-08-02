@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+    <title>Shopping Cart</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Style.css" media="screen" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    </head>        
+    <body>
+        <header>
+            <div id="logoLeft"> 
+                <a href="index.html" id="logo"></a>
+            </div>
+            <div id="navRigth">
+                <div id="signRegDiv">
+                    <a onclick="signFunc()" id="signReg">
+                        <span class="tooltiptextSign">Sign In <hr> Register</span>
+                    </a>
+                    <a id="cartA" href="cart.html">
+                        <span class="tooltiptextCart">Cart</span>
+                    </a>
+                </div>
+            <div>
+                <nav id="main-nav">
+                    <ul id="my-list" class= "menu1"></ul>
+                </nav>
+            </div>
+            <div class="menu__toggler"><span></span></div>
+            </div>
+        </header>
+        <div id="site">            
+            <div id="content">
+                <h1>Your Shopping Cart</h1>
+                <form id="shopping-cart" action="cart.html" method="post">
+                    <table class="shopping-cart">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col" colspan="2">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>                            
+                        </tbody>
+                    </table>
+                    <p id="sub-total">
+                        <strong>Sub Total</strong>: <span id="stotal"></span>
+                    </p>
+                    <ul id="shopping-cart-actions">
+                        <li>
+                            <input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
+                        </li>
+                        <li>
+                            <input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
+                        </li>
+                        <li>
+                            <a href="index.html" class="btn">Continue Shopping</a>
+                        </li>
+                        <li>
+                            <a href="checkout.html" class="btn">Go To Checkout</a>
+                        </li>
+                    </ul>
+                </form>
+            </div> 
+        </div>        
+        <footer>
+            <div> 
+                <div >
+                    <p id="shipInfo">We ship worldwide! <br> Free international shipping </p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Sign in or register</a>
+                    </li> 
+                    <li>
+                        <a href="Credits.html">Credits</a>
+                    </li>
+                </ul>
+                <ul>                  
+                    <li id="rights">&copy; All rights reserved to ND Design &amp; Nadia Tuchman</li>
+                </ul>
+            </div>
+        </footer>        
+        <script src="scripts/master.js"></script>            
+    </body>
+</html>

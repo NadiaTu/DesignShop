@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>       
+    <head>
+        <title>ND Design Shop-Earrings</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Style.css" media="screen" type="text/css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </head>        
+    <body>        
+        <div id="site">
+                <header>
+                    <div id="logoLeft"> 
+                        <a href="index.html" id="logo"></a>
+                    </div>
+                    <div id="navRigth">
+                        <div id="signRegDiv">
+                            <a onclick="signFunc()" id="signReg">
+                                <span class="tooltiptextSign">Sign In <hr> Register</span>
+                            </a>
+                            <a id="cartA" href="cart.html">
+                                <span class="tooltiptextCart">Cart</span>
+                            </a>
+                        </div>
+                        <div>
+                            <nav id="main-nav">
+                                <ul id="my-list" class= "menu1"></ul>
+                            </nav>
+                        </div>
+                        <div class="menu__toggler"><span></span></div>
+                    </div>
+                </header>
+                <h1>
+                    <img src="images/EarringsIcon.png" alt="earrings" class="catTitle ProdCatImgEarrings">
+                </h1>
+            <div id="content">
+                <div id="products">                                   
+                    <div class="product-description" data-name="Flowers and raindrops earrings" data-price="45">
+                        <img id="101" alt="Light blue flowers" src="images/e1s.jpg"/>
+                        <h3 class="product-name">Flowers and raindrops</h3>
+                        <h4>Rhodium flowers and light-blue Swarovski crystals. Sterling-silver ear hooks.</h4>
+                        <p class="itemSize"><b>More details:</b> lenght:3.5cm width:1.1cm</p>	
+                        <p class="product-price">&dollar; 45</p>
+                        <form class="add-to-cart" action="cart.html" method="post">
+                            <div>
+                                <label for="qty-1">Quantity</label>
+                                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                            </div>
+                            <p><input type="submit" value="Add to cart" class="btn" /></p>
+                        </form>
+                    </div>
+                    <div class="product-description" data-name="Red wine earrings" data-price="45">
+                        <img id="102" alt="Red wine earrings" src="images/e2s.jpg"/>
+                        <h3 class="product-name">Red wine earrings</h3>
+                        <h4>Gold-plated flowers and Swarovski crystals. Gold-filled ear hooks.</h4>                     
+                        <p class="itemSize"><b>More details:</b> lenght:5.5cm width:1.5cm </p>
+                        <p class="product-price">&dollar; 45</p>
+                        <form class="add-to-cart" action="cart.html" method="post">
+                            <div>
+                                <label for="qty-2">Quantity</label>
+                                <input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+                            </div>
+                            <p><input type="submit" value="Add to cart" class="btn" /></p>
+                        </form>
+                    </div>                        
+                    <div class="product-description" data-name="Rose earrings" data-price="30">
+                        <img id="103" alt="Pink rose" src="images/e3s.jpg"/>
+                        <h3 class="product-name">Rose earrings</h3>
+                        <h4>Gold-plated filigree with rose and crystal beads. Gold-filled ear hooks.</h4>                     
+                        <p class="itemSize"><b>More details:</b> lenght:3cm width:1.3cm </p>				
+                        <p class="product-price">&dollar; 30</p>
+                        <form class="add-to-cart" action="cart.html" method="post">
+                            <div>
+                                <label for="qty-3">Quantity</label>
+                                <input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
+                            </div>
+                            <p><input type="submit" value="Add to cart" class="btn" /></p>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <footer>
+            <div> 
+                <div >
+                    <p id="shipInfo">We ship worldwide! <br> Free international shipping </p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Sign in or register</a>
+                    </li> 
+                    <li>
+                        <a href="Credits.html">Credits</a>
+                    </li>
+                </ul>
+                <ul>                  
+                    <li id="rights">&copy; All rights reserved to ND Design &amp; Nadia Tuchman</li>
+                </ul>
+            </div>
+        </footer>            
+        <script src="scripts/master.js"></script>
+        <script defer src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </body>
+</html>

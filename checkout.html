@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Style.css" media="screen" type="text/css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>        
+    </head>
+    <body id="checkout-page">
+            <header>
+                <div id="logoLeft"> 
+                    <a href="index.html" id="logo"></a>
+                </div>
+                <div id="navRigth">
+                <div id="signRegDiv">
+                    <a onclick="signFunc()" id="signReg">
+                        <span class="tooltiptextSign">Sign In <hr> Register</span>
+                    </a>
+                    <a id="cartA" href="cart.html">
+                        <span class="tooltiptextCart">Cart</span>
+                    </a>
+                </div>
+                <div>
+                    <nav id="main-nav">
+                        <ul id="my-list" class= "menu1"></ul>
+                    </nav>
+                </div>
+                <div class="menu__toggler"><span></span></div>
+                </div>
+            </header>
+        <div id="site">
+            <div id="content">
+                <h1>Checkout</h1>
+                <table id="checkout-cart" class="shopping-cart">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                <tbody></tbody>
+                </table>
+                <div id="pricing">
+                    <p id="shipping">
+                        <strong>Shipping</strong>: <span id="sshipping"></span>
+                    </p>
+                    <p id="sub-total">
+                        <strong>Total</strong>: <span id="stotal"></span>
+                    </p>
+                </div>
+                <form action="order.html" method="post" id="checkout-order-form">
+                    <h2>Your Details</h2>                
+                    <fieldset id="fieldset-billing">
+                        <legend>Billing</legend>
+                        <div>
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" id="fname" data-type="string" maxleght="30" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                                <label for="lname">Last name</label>
+                                <input type="text" name="lname" id="lname" data-type="string" maxleght="50" data-message="This field cannot be empty" />
+                            </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" data-type="expression" maxleght="50" data-message="Not a valid email address" />
+                        </div>
+                        <div>
+                            <label for="address1">Address</label>
+                            <input type="text" name="address1" id="address1" data-type="string" maxleght="80" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                                <label for="address2">Address Line 2</label>
+                                <input type="text" name="address2" id="address2" data-type="string" maxleght="80" data-message="This field cannot be empty" />
+                            </div>
+                        <div>
+                            <label for="zip">ZIP Code</label>
+                            <input type="text" name="zip" id="zip" data-type="string" maxleght="12" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                                <label for="phone">Phone number</label>
+                                <input type="text" name="phone" id="phone" data-type="string" maxleght="20" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country" data-type="string" maxleght="30" data-message="This field cannot be empty" />
+                        </div>
+                    </fieldset>
+                    <div id="shipping-same">Same as Billing <input type="checkbox" id="same-as-billing" value=""/></div>
+                    <fieldset id="fieldset-shipping">
+                        <legend>Shipping</legend>
+                        <div>
+                            <label for="sfname">First name</label>
+                            <input type="text" name="sfname" id="sfname" data-type="string" maxleght="30" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                                <label for="slname">Last name</label>
+                                <input type="text" name="slname" id="slname" data-type="string" maxleght="50" data-message="This field cannot be empty" />
+                            </div>
+                        <div>
+                            <label for="semail">Email</label>
+                            <input type="email" name="semail" id="semail" data-type="expression"  maxleght="50" data-message="Not a valid email address" />
+                        </div>
+                        <div>
+                            <label for="saddress1">Address</label>
+                            <input type="text" name="saddress1" id="saddress1" data-type="string"  maxleght="80" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                            <label for="saddress2">Address Line 2</label>
+                            <input type="text" name="saddress2" id="saddress2" data-type="string"  maxleght="80" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                            <label for="szip">ZIP Code</label>
+                            <input type="text" name="szip" id="szip" data-type="string" maxleght="12" data-message="This field cannot be empty" />
+                        </div>
+                        <div>
+                                <label for="sPhone">Phone Number</label>
+                                <input type="text" name="sPhone" id="sphone" maxleght="20" data-type="string" data-message="This field cannot be empty" />
+                            </div>
+                        <div>
+                            <label for="scountry">Country</label>
+                            <input type="text" name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty" />                            
+                        </div>
+                    </fieldset>
+                    <p><input type="submit" id="submit-order" value="Submit" class="btn" /></p>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div> 
+                <div >
+                    <p id="shipInfo">We ship worldwide! <br> Free international shipping </p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="cart.html">Cart</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Sign in or register</a>
+                    </li> 
+                    <li>
+                        <a href="Credits.html">Credits</a>
+                    </li>
+                </ul>
+                <ul>                  
+                    <li id="rights">&copy; All rights reserved to ND Design &amp; Nadia Tuchman</li>
+                </ul>
+            </div>
+        </footer> 
+        <script src="scripts/master.js"></script>
+    </body>
+</html>	
