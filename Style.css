@@ -395,14 +395,29 @@ footer a{
 .product-description img{
 	height: 280px;
 	overflow: hidden;
-	width: 280px;
-	border: 1px solid #f0f0f0;
+	width: 280px;	
 	padding: 1px;		
-	margin-bottom: 2px;
+	margin-top: -6px;
+	margin-right:-3px;
 	float: left;
 	position: relative;	
 	display: flex;
 	flex-wrap: wrap;    
+}
+
+.product-description img:hover{
+	transform: scale(2,2);
+	transform-origin: 50px 50px;
+	z-index: 900;
+	transition: 1000ms right;
+}
+.zoomIn{
+	position: absolute;
+	top:10px;
+	left:5px;
+	background-color: #ddd;
+	color:#6E4871;
+	font-weight: 600;
 }
 
 .product-description h3{
@@ -443,13 +458,14 @@ form.add-to-cart p {
 }
 
 form input.qty {
-	width: 40px;
+	width: 50px;
 	border: 1px solid #eee;
 	font: 1em;
 	background: #f9f9f9;
 	color: #000;
 	border-radius: 3px;
 	margin-left: 0.4em;	
+	line-height: 2.5;
 }
 
 /****************** Forms ****************/
@@ -552,7 +568,8 @@ form input.qty {
 	width: 370px;		
 }
 
- .regForm input, .shopping-cart{
+ .regForm input, 
+ .shopping-cart{
 	color: #6E4871;
 	border-color:#D6C7DA;
 	margin-bottom: 20px;
@@ -635,7 +652,8 @@ form input.qty {
 #contact_reason {
     width: 365px;
 }
-#contact_reason input, .radBtn{
+#contact_reason input, 
+.radBtn{
 	display: flex;
 	display: -ms-flexbox;
 	display: -webkit-flex;
@@ -664,11 +682,12 @@ form input.qty {
 .aboutMe{ 			
 	position:relative; 
 	text-align: justify; 
-	width: 350px;
+	width: 500px;
 	float:center;
 	display:block;
 	font-size: 1.3em;
-	color:	#996798;	 
+	color:	#996798;
+	line-height: 1.5;	 
 }
 
 #credit-links {
@@ -825,7 +844,8 @@ font-size: 1.1em;
 margin-top:0px;	
 }
 
-#fieldset-billing input, #fieldset-shipping input{
+#fieldset-billing input, 
+#fieldset-shipping input{
 	color: #6E4871;
 	border-color:#D6C7DA;
 	background-color: white;
@@ -1037,7 +1057,8 @@ margin-top:0px;
 		flex-wrap: wrap;
 	}
     
-    .signForm input, .regForm input{
+	.signForm input, 
+	.regForm input{
         padding:  .2em 3.8em;
         margin: 3px;
         
@@ -1105,6 +1126,13 @@ margin-top:0px;
 
 	.aboutMe{
 	width: 290px;		
+	}
+
+	.product-description img:hover{
+		transform: scale(1.5,1.5);
+		transform-origin: 120px 120px;
+		z-index: 900;
+		transition: 800ms left;		
 	}
 
 	#credit-links {
